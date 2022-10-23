@@ -4,8 +4,8 @@ use interoptopus::Interop;
 use interoptopus::util::NamespaceMappings;
 use interoptopus::Error;
 
-const CLASS_NAME: &str = "my_class";
-const NAMESPACE: &str = "my_namespace";
+const CLASS_NAME: &str = "{{interop_class}}";
+const NAMESPACE: &str = "{{namespace}}";
 
 pub fn ffi_inventory() -> Inventory {
     println!("building bindings for {}.{}", CLASS_NAME, NAMESPACE);

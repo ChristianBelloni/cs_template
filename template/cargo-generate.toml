@@ -1,0 +1,3 @@
+[placeholders]
+interop_class = { type="string", prompt="CS class name?" }
+namespace = { type="string", prompt="namespace name?" }
