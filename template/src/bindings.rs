@@ -6,6 +6,8 @@ use interoptopus::Error;
 
 const CLASS_NAME: &str = "{{interop_class}}";
 const NAMESPACE: &str = "{{namespace}}";
+const OUT_DIR: &str = "{{out_dir}}";
+const CS_FILE: &str = "{{cs_file}}";
 
 pub fn ffi_inventory() -> Inventory {
     println!("building bindings for {}.{}", CLASS_NAME, NAMESPACE);
@@ -25,8 +27,7 @@ pub fn bindings_csharp() -> Result<(), Error> {
 
     Generator::new(config, crate::bindings::ffi_inventory())
         .add_overload_writer(DotNet::new())
-        //.add_overload_writer(Unity::new())
-        .write_file("/csharp/Interop.cs")?;
+        .write_file(format!("{}/{}", OUT_DIR, CS_FILE))?;
 
     Ok(())
 }

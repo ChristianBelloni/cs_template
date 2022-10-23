@@ -1,3 +1,5 @@
 [placeholders]
 interop_class = { type="string", prompt="CS class name?" }
 namespace = { type="string", prompt="namespace name?" }
+out_dir = { type="string", prompt="bindings out dir?" }
+cs_file = { type="string", prompt="bindings filename?" }
