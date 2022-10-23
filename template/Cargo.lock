@@ -44,6 +44,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1"
 
 [[package]]
+name = "heck"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2540771e65fc8cb83cd6e8a237f70c319bd5c29f78ed1084ba5d50eeac86f7f9"
+
+[[package]]
 name = "ident_case"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -56,6 +62,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b04aeb61beece992734581fb489c1f3f7eb63fe24cc6088369b4b9e60e6c67f9"
 dependencies = [
  "interoptopus_proc",
+]
+
+[[package]]
+name = "interoptopus_backend_csharp"
+version = "0.14.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "eb9e5007abeaf135339a75b66b3cc7a56d41e6facdeb66fe247783e578190d5c"
+dependencies = [
+ "heck",
+ "interoptopus",
 ]
 
 [[package]]
@@ -110,6 +126,7 @@ name = "template"
 version = "0.1.0"
 dependencies = [
  "interoptopus",
+ "interoptopus_backend_csharp",
 ]
 
 [[package]]
