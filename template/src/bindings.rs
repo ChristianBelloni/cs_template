@@ -36,6 +36,6 @@ pub fn bindings_csharp() -> Result<(), Error> {
 pub mod c_sharp{
     #[test]
     pub fn c_sharp(){
-        crate::bindings::ffi_inventory();
+        crate::bindings::bindings_csharp().unwrap();
     }
 }
